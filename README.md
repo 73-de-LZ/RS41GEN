@@ -1,10 +1,9 @@
-#RS41GEN is modified version of RS41HUP to use RS41 as an RF frequency generator
+# RS41GEN is modified version of RS41HUP to use RS41 as an RF frequency generator
 The idea is to use two RS41 as a clock source for RTL_SDR dongles, first can be set to 390.0MHz and second to 418.805MHz for example. RF outputs are connected to some Double Balanced Mixer, i used one ESMD-C2HX2, Schottky by MACOM. Mixer output is filtered by 3rd order Chebyshev lowpass filter and can feed few RTL_SDR dongles, just connect it to each R820T pin 9 trought 100pF capacitor. By this way we can moove the well known birdie of RTL_SDR from 403.2 to some other QRG, where there is no chance to mess with signal from any sonde, received in your location. My favorite DX sondes are those launched from Budapest Hungary, about 600km from me and their frequency is exactly 403.2MHz. When i upgrade my RTL_SDRs with TCXO my nightmare begin, so that is my temporary solution, untill i get one Si5351 with TCXO and add to its output 5th or more order lowpass filter.
 
 The text below is unchanged from RS41HUP: 
 
 # RS41HUP (Ham Use Project)
-Firmware for RS41 for HAM use<br>
 Firmware for RS41 for HAM use.
 
 It is possible to recycle RS41-SGP sondes for amateur radio use without any electrical changes! You just have to build a new firmware (this one) and apply it via a cheap adaptor "ST-Linkv2". Modified sonde now transmits on defineable frequenca in 70cm band GPS and telemetry data in FSK RTTY format which is used by HAB projects and additionally it transmits APRS packets on a seperately defineable TX frequency.
